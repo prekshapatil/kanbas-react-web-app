@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades Screen</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Dropdown for Gradebook -->
+        <select name="gradebook" id="gradebook">
+            <option value="">Gradebook</option>
+            <!-- Options will be populated here -->
+        </select>
+        <button>Import</button>
+        <!-- Dropdown for Export -->
+        <select name="export" id="export">
+            <option value="">Export</option>
+            <!-- Options will be populated here -->
+        </select>
+        <button>Configure</button>
+    </div>
+
+    <div>
+        <label for="studentSearch"><b><p>Student Names</p></b></label>
+    </div>
+    <div>
+        <input type="search" id="studentSearch" placeholder="Search Students">
+    </div>
+    <div>
+        <label for="assignmentSearch"><b><p>Assignment Names</p></b></label>
+    </div>
+    <div>
+        <input type="search" id="assignmentSearch" placeholder="Search Assignments">
+    </div>
+
+    <div>
+        <p><button>Apply Filters</button></p>
+    </div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>A1 SETUP <br><sub>Out of 100</sub><br></th>
+                <th>A2 HTML <br><sub>Out of 100</sub><br</th>
+                <th>A3 CSS <br><sub>Out of 100</sub><br</th>
+                <th>A4 BOOTSTRAP <br><sub>Out of 100</sub><br></th>
+                <th>A5 JAVASCRIPT <br><sub>Out of 100</sub><br</th>
+                <th>A6 REACT <br><sub>Out of 100</sub><br></th>
+                <th>A7 REDUX <br><sub>Out of 100</sub><br</th>
+                <th>A8 NODE <br><sub>Out of 100</sub><br</th>
+                <th>A9 MONGO <br><sub>Out of 100</sub><br></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice Wonderland</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Princess Leia</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Luke Skywalker</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Han Solo</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Lando Calresian</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Boba Fet</td>
+                <td>98</td>
+                <td>89</td>
+                <td><input type="text" name="gradeA1" value="55"></td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Darth Vader</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td><input type="text" name="gradeA1" value="66"></td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Obi-Wan Kanobi</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>R2-D2</td>
+                <td>98</td>
+                <td><input type="text" name="gradeA1" value="98"></td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>C-3PO</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td><input type="text" name="gradeA1" value="90"></td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Yoda</td>
+                <td>98</td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Admiral Ackbar</td>
+                <td><input type="text" name="gradeA1" value="78"></td>
+                <td>89</td>
+                <td>87</td>
+                <td>90</td>
+                <td>89</td>
+                <td>94</td>
+                <td>88</td>
+                <td>87</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

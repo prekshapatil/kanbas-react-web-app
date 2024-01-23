@@ -1,0 +1,69 @@
+<form>
+      <label for="speed-grader">Speed Grade</label><br>
+      <select id="speed-grader" name="speed-grader">
+        <option value="SpeedGrader">Percentage</option>
+      </select>
+      <hr/>
+   
+      <h3>Assignment Name</h3>
+      <input type="text" id="assignment-name" name="assignment_name" placeholder="A1 - ENV + HTML"><br><br>
+   
+      <textarea id="assignment-description" name="assignment_description" placeholder="This is the assignment description"></textarea><br><br>
+   
+      <label for="points">Points</label><br>
+      <input type="number" id="points" name="points" placeholder="100"><br><br>
+   
+      <label for="assignment-group">Assignment Group</label><br>
+      <select id="assignment-group" name="assignment_group">
+        <option value="assignments">ASSIGNMENTS</option>
+      </select><br><br>
+   
+      <label for="display-grade">Display Grade as</label><br>
+      <select id="display-grade" name="display_grade">
+        <option value="percentage">Percentage</option>
+      </select><br><br>
+   
+      <label for="submission_type">Submission Type</label><br>
+      <select id="submission_type" name="submission_type">
+        <option value="Online">Online</option>
+      </select><br><br>
+   
+      <p>Online Entry Options</p>
+      <label>
+        <input type="checkbox" name="entry_options" value="text_entry"> Text Entry
+      </label><br>
+     
+      <label>
+        <input type="checkbox" name="website_options" value="website_url"> Website URL
+      </label><br>
+     
+      <label>
+        <input type="checkbox" name="media_options" value="media_recordings"> Media Recordings
+      </label><br>
+     
+      <label>
+        <input type="checkbox" name="student_options" value="student_annotation"> Student Annotation
+      </label><br>
+     
+      <label>
+        <input type="checkbox" name="file_options" value="file_uploads"> File Uploads
+      </label><br><br>
+     
+   
+      <label for="assign">Assign</label><br>
+      <label for="assign-to">Assign to</label><br>
+      <input type="assign" id="assign-to" name="assign-to" placeholder="Everyone"><br><br>
+   
+      <label for="due-date">Due</label><br>
+      <input type="date" id="due-date" name="due_date" value="2021-01-01" ><br><br>
+   
+      <label for="available-from">Available from</label><br>
+      <input type="date" id="available-from" name="available_from" value="2021-01-01"><br><br>
+   
+      <label for="available-until">Until</label><br>
+      <input type="date" id="available-until" name="available_until" value="2021-01-01"><br><br>
+   
+      <button type="button">Cancel</button>
+      <input type="submit" value="Save">
+    </form>
+   

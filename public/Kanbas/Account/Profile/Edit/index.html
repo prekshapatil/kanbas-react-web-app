@@ -1,0 +1,62 @@
+<h3>Jose Annunziato</h3>
+ 
+<form action="/submit-profile" method="post">
+    <table>
+        <tr>
+            <label for="name">Name:*</label>
+            <input type="text" id="name" name="name" value="Jose Annunziato">
+ 
+            <label for="pronouns">Pronouns:</label>
+            <select id="pronouns" name="pronouns">
+                <option value="none">None</option>
+            </select><br><br>
+        </tr>
+        <tr>
+            <td><label for="title">Title:</label></td>
+            <td><input type="text" id="title" name="title"></td>
+        </tr>
+    </table>
+ 
+    <h4>Contact</h4>
+    <p>No registered services, you can add some on the <a href="/settings">settings</a> page.</p>
+ 
+    <h4>Contact</h4>
+    <p>No registered services, you can add some on the <a href="/settings">settings</a> page.</p>
+ 
+    <h4>Biography</h4>
+    <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast</p>
+    <textarea id="biography" name="biography" rows="2" cols="50">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+ 
+    <h4>Links</h4>
+    <ul>
+        <li><a href="https://www.youtube.com">YouTube</a> - Links to an external site.</li>
+    </ul>
+    <table>
+        <tr>
+            <td>
+                <label for="link-title">Title:</label>
+               
+            </td>
+            <td>
+                <label for="url">URL:</label>
+            </td>
+            <tr>
+                <td>
+                    <input type="text" id="link-title" name="link-title">
+   
+                </td>
+                <td>
+                    <input type="url" id="url" name="url" placeholder="https://www.youtube.com">
+                    <a href="#">Remove</a>
+                </td>
+            </tr>
+        </tr>
+    </table>
+    <button type="button">Add another link</button>
+    <br>
+    <button type="button">Cancel</button>
+    <input type="submit" value="Save Profile"><br>
+    <button type="button">Edit Profile</button>
+    <button type="button">Cancel Editing</button>
+</form>
+ 
