@@ -1,0 +1,168 @@
+.wd-courses-home-header a {
+    text-decoration: none;
+    color: red;
+    font-size: medium;
+  }
+  
+  .wd-courses-home-header li {
+    font-size: medium;
+  }
+  
+  .wd-courses-navigation {
+    list-style: none;
+    width: 195px;
+    margin-left: 9px;
+  }
+  
+  .wd-courses-navigation li {
+    padding-left: 3.5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .wd-courses-navigation a {
+    text-decoration: none;
+    color: red;
+    font-size: medium;
+    text-align: justify;
+    text-wrap: balance;
+  }
+  
+  .wd-courses-navigation li.wd-active {
+    border-left: 1px solid black;
+    border-width: 2px;
+    font-weight: 550;
+  }
+  
+  .wd-courses-navigation a:hover {
+    color: #000;
+  }
+  
+  .wd-modules {
+    margin-left: 20px !important;
+  }
+  /* 
+    .ms-1 {
+        margin-left: 100px !important;
+    } */
+  
+  .wd-courses-secondary-header {
+    padding-left: 55px;
+    font-size: small;
+  }
+  
+  .wd-flex-grow-2 {
+    flex-grow: 0.4;
+  }
+  
+  .wd-modules ul {
+    list-style: none;
+  }
+  
+  .wd-modules {
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 0;
+  }
+  
+  .list-heading {
+    color: #41464b;
+    background-color: #e2e3e5;
+    border-top: #000;
+    height: 20px;
+  }
+  
+  .wd-course-status {
+    vertical-align: top;
+    margin-left: 30px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  
+  .wd-list-group {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #000;
+  }
+  
+  .wd-list-group-item {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #000;
+  }
+  
+  .wd-margin-top {
+    margin-top: 20px;
+  }
+  .wd-margin-top-10 {
+    margin-top: 10px;
+  }
+  .wd-margin-left {
+    margin-left: 20px;
+  }
+  .breadcrumb a {
+    text-decoration: none;
+  }
+  .wd-margin-top-0 {
+    margin-top: 0;
+  }
+  .wd-margin-right {
+    margin-right: 20px;
+  }
+  /* .wd-button a {
+      color: black;
+      background-color: lightgray;
+    } */
+  .wd-inline {
+    display: inline;
+  }
+  .wd-inline a {
+    display: inline;
+  }
+  .wd-button-1 {
+    color: black;
+    background-color: lightgray;
+  }
+  .wd-button-2 {
+    color: white;
+    background-color: green;
+  }
+  .wd-underline-no a {
+    text-decoration: none;
+    color: black;
+  }
+  .wd-border-1 {
+    border-width: 1px 0px 0px 0px;
+  }
+  .wd-border-0 {
+    border-width: 0 0 0 0;
+  }
+  .wd-font-size-sm {
+    font-size: small;
+  }
+  .wd-text-center {
+    text-align: center;
+  }
+  .wd-text-right {
+    text-align: right;
+  }
+  
+  .wd-list-week-header {
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  .wd-list-subheader {
+    font-weight: bold;
+  }
+  
+  .wd-border-radius-0 {
+    border-radius: 0;
+    box-shadow: #000;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: red;
+  }
+  
