@@ -61,5 +61,89 @@
       "description": "Write test cases and debug code to improve software quality.",
       "dueDateTime": "Apr 4, 2024 at 11:59pm",
       "course": "RS103"
+    },
+    {
+      "_id": "A401",
+      "title": "NLP Fundamentals Assignment",
+      "description": "Perform text preprocessing and basic analysis on a given dataset.",
+      "dueDateTime": "Mar 23, 2024 at 11:59pm",
+      "course": "RS104"
+    },
+    {
+      "_id": "A402",
+      "title": "Machine Learning for NLP Project",
+      "description": "Implement a machine learning model for sentiment analysis.",
+      "dueDateTime": "Mar 28, 2024 at 11:59pm",
+      "course": "RS104"
+    },
+    {
+      "_id": "A403",
+      "title": "Advanced NLP Techniques Assignment",
+      "description": "Use transformers for a named entity recognition task.",
+      "dueDateTime": "Apr 2, 2024 at 11:59pm",
+      "course": "RS104"
+    },
+    {
+      "_id": "A501",
+      "title": "Android App Development Project",
+      "description": "Create an Android app that utilizes GPS data.",
+      "dueDateTime": "Mar 26, 2024 at 11:59pm",
+      "course": "RS105"
+    },
+    {
+      "_id": "A502",
+      "title": "iOS Interface Design Assignment",
+      "description": "Design and implement a user-friendly interface for an iOS app.",
+      "dueDateTime": "Mar 31, 2024 at 11:59pm",
+      "course": "RS105"
+    },
+    {
+      "_id": "A503",
+      "title": "Cross-Platform Mobile App Project",
+      "description": "Develop a cross-platform mobile app using Flutter or React Native.",
+      "dueDateTime": "Apr 5, 2024 at 11:59pm",
+      "course": "RS105"
+    },
+    {
+      "_id": "A601",
+      "title": "Software Project Planning Assignment",
+      "description": "Create a project plan for a hypothetical software project, including timelines and resource allocations.",
+      "dueDateTime": "Mar 21, 2024 at 11:59pm",
+      "course": "RS106"
+    },
+    {
+      "_id": "A602",
+      "title": "Software Testing and QA Project",
+      "description": "Develop a comprehensive testing strategy for an existing software project.",
+      "dueDateTime": "Mar 26, 2024 at 11:59pm",
+      "course": "RS106"
+    },
+    {
+      "_id": "A603",
+      "title": "Agile Methodologies Implementation Assignment",
+      "description": "Implement an Agile methodology for a team project and report on the process and outcomes.",
+      "dueDateTime": "Apr 1, 2024 at 11:59pm",
+      "course": "RS106"
+    },
+    {
+      "_id": "A701",
+      "title": "Deep Learning Basics Assignment",
+      "description": "Implement a basic neural network for image classification.",
+      "dueDateTime": "Mar 24, 2024 at 11:59pm",
+      "course": "RS107"
+    },
+    {
+      "_id": "A702",
+      "title": "CNN Implementation Project",
+      "description": "Use a convolutional neural network to recognize handwritten digits.",
+      "dueDateTime": "Mar 29, 2024 at 11:59pm",
+      "course": "RS107"
+    },
+    {
+      "_id": "A703",
+      "title": "RNN for Time Series Prediction Assignment",
+      "description": "Implement a recurrent neural network to predict future values of a time series.",
+      "dueDateTime": "Apr 3, 2024 at 11:59pm",
+      "course": "RS107"
     }
   ]
