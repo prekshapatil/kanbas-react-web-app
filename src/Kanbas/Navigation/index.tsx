@@ -4,15 +4,15 @@ import logo from "../images/NEULogo.png";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaEnvelopeOpenText, FaClock, FaDesktop, FaCircle, FaQuestionCircle, FaArrowRight } from "react-icons/fa";
 function KanbasNavigation() {
   const links = [
-    { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
-    { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" /> },
-    { label: "Courses", icon: <FaBook className="fs-2" /> },
-    { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" /> },
-    { label: "Inbox", icon: <FaEnvelopeOpenText className="fs-2" /> },
-    { label: "History", icon: <FaClock className="fs-2" /> },
-    { label: "Studio", icon: <FaDesktop className="fs-2" /> },
-    { label: "Commons", icon: <FaArrowRight className="fs-2" /> },
-    { label: "Help", icon: <FaQuestionCircle className="fs-2" /> },
+    { label: "Account", icon: <FaRegUserCircle className="fs-2" style={{color: "lightgrey"}}/> },
+    { label: "Dashboard", icon: <FaTachometerAlt className="fs-2" style={{color: "red"}} /> },
+    { label: "Courses", icon: <FaBook className="fs-2" style={{color: "red"}}/> },
+    { label: "Calendar", icon: <FaRegCalendarAlt className="fs-2" style={{color: "red"}}/>  },
+    { label: "Inbox", icon: <FaEnvelopeOpenText className="fs-2" style={{color: "red"}}/> },
+    { label: "History", icon: <FaClock className="fs-2" style={{color: "red"}}/> },
+    { label: "Studio", icon: <FaDesktop className="fs-2" style={{color: "red"}}/> },
+    { label: "Commons", icon: <FaArrowRight className="fs-2" style={{color: "red"}}/> },
+    { label: "Help", icon: <FaQuestionCircle className="fs-2" style={{color: "red"}}/> },
   ];
   const { pathname } = useLocation();
   return (

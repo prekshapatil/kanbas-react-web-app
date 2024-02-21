@@ -8,7 +8,7 @@ function Dashboard() {
     return (
         <div className="p-4">
             <h1>Dashboard</h1>              <hr />
-            <h2>Published Courses (3)</h2> <hr />
+            <h2>Published Courses (7)</h2> <hr />
             <div className="row">
                 <div className="row row-cols row-cols-md-5 g-4">
                     {courses.map((course) => (
