@@ -1,12 +1,30 @@
 import Button from 'react-bootstrap/Button';
 import "./index.css"
 import { FaCheckCircle, FaChevronDown, FaEllipsisV, FaPencilAlt, FaPlus, FaPlusCircle } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { KanbasState } from '../../store';
+import { deleteAssignment } from './assignmentsReducer';
 function Assignments() {
-  const { courseId } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+
+    const { courseId } = useParams();
+    const assignmentsList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+    const assignmentList = assignmentsList.filter((a) => a.course === courseId);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleDelete = () => {
+      const result = window.confirm("Do you want to proceed?");
+      if (result) {
+        console.log("User clicked Yes");
+        return true;
+      } else {
+        console.log("User clicked No");
+        return false;
+      }
+    };
+
   return (
     <div className="col me-2">
       <div className="row wd-margin-top">
@@ -17,10 +35,10 @@ function Assignments() {
             </a>
           </div>
           <div className="wd-button float-end">
-            <Button variant="danger btn-sm">
-              <FaPlus className="me-1" />
+            <Link to={"../Assignments/Editor"} className="btn btn-danger btn-sm" role="button">
+            <FaPlus className="me-1" />
               Assignment
-            </Button>{' '}
+            </Link>
           </div>
 
           <div className="wd-button float-end">
@@ -63,14 +81,18 @@ function Assignments() {
                   </div>
                   <div className='col wd-fg-color-gray ps-0 ms-2'>
                     <Link style={{ color: 'green', textDecoration: 'none' }} className="fw-bold ps-0" to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
-                      {assignment.title}
+                      {assignment.name}
                     </Link>
                     <br />
                     {assignment.description} |
-                    <br /><b>Due</b> {assignment.dueDateTime} | 100 points
+                    <br /><b>Due</b> {assignment.dueDateTime.slice(0,16)} | {assignment.points} points
                   </div>
                   <div className="col-auto" style={{ margin: "auto", display: "flex" }}>
-
+                  <button className="btn m-0 pt-0 pb-0 me-1 btn-danger btn-sm"
+                  onClick={() => {handleDelete() ? dispatch(deleteAssignment(assignment._id)) : 
+                    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+                  }}>
+                  Delete</button>
                     <FaCheckCircle
                       style={{ color: "green" }} />
                     <FaEllipsisV style={{ verticalAlign: "middle" }} />

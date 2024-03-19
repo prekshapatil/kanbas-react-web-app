@@ -1,23 +1,58 @@
-import React from 'react';
-import { assignments } from '../../../Database';
+import React, { useEffect } from 'react';
+import {
+    addAssignment,
+    deleteAssignment,
+    updateAssignment,
+    setAssignment,
+    cancelAssignmentUpdate
+} from "../assignmentsReducer";
 import { useNavigate, useParams, Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { KanbasState } from '../../../store';
 
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();
-    const assignment = assignments.find((assignment) =>
-        assignment._id === assignmentId);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const isNewAssignment = !assignmentId || assignmentId.trim() === '';
+    const assignmentList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment);
+    useEffect(() => {
+        const assignmentData = assignmentList.find(a => a._id === assignmentId);
+        if (assignmentData) {
+            dispatch(setAssignment(assignmentData));
+            console.log("Hello");
+        } else {
+            dispatch(cancelAssignmentUpdate(assignment));
+        }
+    }, [dispatch, assignmentId]);
     const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+        if (isNewAssignment) {
+            const newAssignment = { ...assignment, _id: new Date().getTime().toString(), course: courseId };
+            console.log(newAssignment);
+            dispatch(updateAssignment(newAssignment));
+            dispatch(addAssignment(newAssignment));
+        } else {
+            dispatch(updateAssignment(assignment));
+        }
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
+
+    const handleCancel = () => {
+        dispatch(cancelAssignmentUpdate(assignment))
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
     return (
         <div>
             <h2>Assignment Name</h2>
-            <input value={assignment?.title}
+            <input value={assignment?.name}
+                onChange={(e: { target: { value: any; }; }) => dispatch(setAssignment({ ...assignment, name: e.target.value }))}
                 className="form-control mb-2" />
             <br />
-            <textarea className="form-control" cols={50} rows={5}>Hello</textarea>
+            <textarea value={assignment?.description} className="form-control" cols={50} rows={5}
+                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}></textarea>
             <br />
             <div className="row g-0 text-end" style={{ paddingBottom: "15px" }}>
                 <div className="col-6 col-md-4" style={{ paddingTop: "5px", paddingRight: "15px" }}>
@@ -29,7 +64,8 @@ function AssignmentEditor() {
                         type="number"
                         placeholder="Points"
                         aria-label="default input example"
-                        value="100"
+                        value={assignment?.points}
+                        onChange={(e) => dispatch(setAssignment({ ...assignment, points: e.target.value }))}
                     />
                 </div>
             </div>
@@ -109,7 +145,9 @@ function AssignmentEditor() {
                         />
                         <br />
                         <b>Due</b>
-                        <input className="form-control" type="datetime-local" />
+                        <input className="form-control" type="datetime-local" value={assignment?.dueDateTime}
+                            onChange={(e) => dispatch(setAssignment({ ...assignment, dueDateTime: e.target.value }))} />
+
                         <br />
                         <div
                             className="wd-flex-row-container"
@@ -129,10 +167,12 @@ function AssignmentEditor() {
 
                             <div className="row">
                                 <div className="col">
-                                    <input className="form-control w-75" type="datetime-local" />
+                                    <input className="form-control w-75" type="datetime-local" value={assignment?.availableFromDate}
+                                        onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
                                 </div>
                                 <div className="col">
-                                    <input className="form-control w-75" type="datetime-local" />
+                                    <input className="form-control w-75" type="datetime-local" value={assignment?.availableUntilDate}
+                                        onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
                                 </div>
 
                             </div>
@@ -140,24 +180,25 @@ function AssignmentEditor() {
                     </div>
                 </div>
             </div>
-            <div style={{marginLeft: "10px"}}>
-              <div className="d-flex justify-content-between" style={{ paddingTop: "15px" }}>
-                <span style={{marginLeft: "20px",  paddingTop: "15px"}}>
-                  <input type="checkbox" />
-                  Notify users that this content has changed
-                </span>
-                <span>
-                  <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-                    className="btn" style={{height: "fit-content", backgroundColor: "#E0E0E0"}}>
-                    Cancel
-                </Link>
-                  <button onClick={handleSave} className="btn btn-danger" style={{marginRight: "5px"}}>
-                    Save
-                </button>
-                </span>
-              </div>
+            <div style={{ marginLeft: "10px" }}>
+                <div className="d-flex justify-content-between" style={{ paddingTop: "15px" }}>
+                    <span style={{ marginLeft: "20px", paddingTop: "15px" }}>
+                        <input type="checkbox" />
+                        Notify users that this content has changed
+                    </span>
+                    <span>
+                        <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                            onClick={() => dispatch(cancelAssignmentUpdate(assignment))}
+                            className="btn" style={{ height: "fit-content", backgroundColor: "#E0E0E0" }}>
+                            Cancel
+                        </Link>
+                        <button onClick={handleSave} className="btn btn-danger" style={{ marginRight: "5px" }}>
+                            Save
+                        </button>
+                    </span>
+                </div>
 
-              <hr style={{marginLeft: "10px"}} />
+                <hr style={{ marginLeft: "10px" }} />
             </div>
         </div>
     );

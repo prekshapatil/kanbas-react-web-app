@@ -3,7 +3,7 @@ import Nav from "../Nav";
 import Assignment3 from "./a3";
 import Assignment4 from "./a4";
 
-export function Labs() {
+export function Lab() {
   return (
     <div className="container-fluid">
       <h1>Labs</h1>
