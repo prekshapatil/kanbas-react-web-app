@@ -81,7 +81,7 @@ function Assignments() {
                   </div>
                   <div className='col wd-fg-color-gray ps-0 ms-2'>
                     <Link style={{ color: 'green', textDecoration: 'none' }} className="fw-bold ps-0" to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
-                      {assignment.name}
+                      {assignment.title}
                     </Link>
                     <br />
                     {assignment.description} |

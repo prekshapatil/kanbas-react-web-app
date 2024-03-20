@@ -47,8 +47,8 @@ function AssignmentEditor() {
     return (
         <div>
             <h2>Assignment Name</h2>
-            <input value={assignment?.name}
-                onChange={(e: { target: { value: any; }; }) => dispatch(setAssignment({ ...assignment, name: e.target.value }))}
+            <input value={assignment?.title}
+                onChange={(e: { target: { value: any; }; }) => dispatch(setAssignment({ ...assignment, title: e.target.value }))}
                 className="form-control mb-2" />
             <br />
             <textarea value={assignment?.description} className="form-control" cols={50} rows={5}
